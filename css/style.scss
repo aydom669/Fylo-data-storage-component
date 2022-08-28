@@ -1,0 +1,217 @@
+/* Root
+==================================================== */
+
+$Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+
+$PaleBlue: hsl(243, 100%, 93%);
+$GrayishBlue: hsl(229, 7%, 55%);
+$DarkBlue: hsl(228, 56%, 26%);
+$VeryDarkBlue: hsl(229, 57%, 11%);
+
+/* font
+====================================================== */
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:wght@600&family=Berkshire+Swash&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700;9..144,900&family=Josefin+Sans&family=Manrope:wght@800&family=Outfit:wght@300;400;600&family=Overpass:wght@300;600&family=Poppins:ital,wght@0,100;0,600;1,100;1,300&family=Raleway:wght@400;700&display=swap');
+
+
+
+/* Reset
+=============================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    scroll-behavior: smooth;
+    font-family: 'Raleway', sans-serif;
+}
+
+/* body 
+================================================================= */
+
+body {
+    background: $VeryDarkBlue;
+    background-image: url(images/bg-desktop.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+}
+
+.main {
+    // border: 1px solid #000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    .main__box_1 {
+        background: $DarkBlue;
+        width: 20rem;
+        padding: 2rem 3.5rem;
+        border-radius: 15px 100px 15px 15px;
+
+        .main__box_1--img {
+            margin-bottom: 3rem;
+        }
+
+        .main__box_1--icons {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+            img {
+                padding: 15px;
+                background: $VeryDarkBlue;
+                border-radius: 10px;
+                cursor: pointer;
+                transition: 0.5s;
+
+                &:hover {
+                    background: #000;
+                }
+            }
+        }
+    }
+
+    .main__box_2 {
+        //border: 1px solid #fff;
+        width: 45rem;
+        background: $DarkBlue;
+        padding: 30px;
+        margin: 50px 10px 10px 10px;
+        border-radius: 1rem;
+
+
+        .balao__text {
+            background: #fff;
+            width: 12rem;
+            height: 5rem;
+            padding: 20px;
+            border-radius: 0.8rem;
+            position: absolute;
+            left: 59%;
+            top: 22rem;
+            display: none;
+            transition: 0.5s;
+            
+
+
+            &:before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                width: 0;
+                height: 0;
+                border: 38px solid transparent;
+                border-top-color: #ffff;
+                border-bottom: 0;
+                border-right: 0;
+                margin-left: 7.9rem;
+                margin-bottom: -20px;
+            }
+
+
+            .span__number {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+
+
+        }
+
+        .main__box_2--text {
+            font-size: 1.2rem;
+            color: $GrayishBlue;
+            margin-bottom: 1rem;
+
+            span {
+                color: #fff;
+            }
+        }
+
+        .containe__barra {
+            width: 80%;
+            border-radius: 1rem;
+            background: $VeryDarkBlue;
+
+            .main__box_2--barra {
+                width: 80%;
+                padding: 0.3rem;
+                border-radius: 1rem;
+                background: linear-gradient(90deg, hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+
+                .main__box_2--barra--bola {
+                    width: 1rem;
+                    height: 1rem;
+                    background: #fff;
+                    border-radius: 50%;
+                    position: relative;
+                    left: 96%;
+                    z-index: 1000;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &:hover{
+            .balao__text {
+                display: block;
+            }
+        }
+
+        .main__box_2--footer{
+            width: 80%;
+            color: hsl(243, 100%, 93%);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+@media(max-width: 969px){
+    .main{
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+
+        .main__box_1{
+            width: 90%;
+        }
+
+        .main__box_2{
+            width: 90%;
+
+            .balao__text{
+                left: 40%;
+            }
+        }
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        background-image: url(images/bg-mobile.png);
+        background-size: 150%;
+    }
+
+    .main__box_2{
+        .balao__text{
+            left: 20%;
+        }
+
+        .containe__barra{
+            width: 100%;
+        }
+    }
+}
