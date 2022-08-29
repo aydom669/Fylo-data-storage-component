@@ -41,11 +41,13 @@ body {
       align-items: center;
       gap: 1rem; }
       .main .main__box_1 .main__box_1--icons img {
-        padding: 15px;
         background: #0c122c;
         border-radius: 10px;
         cursor: pointer;
-        transition: 0.5s; }
+        transition: 0.5s;
+        padding: 10px;
+        width: 3rem;
+        height: 3rem; }
         .main .main__box_1 .main__box_1--icons img:hover {
           background: #000; }
   .main .main__box_2 {
@@ -126,7 +128,7 @@ body {
       width: 90%; }
       .main .main__box_2 .balao__text {
         left: 40%; } }
-@media (max-width: 375px) {
+@media (max-width: 400px) {
   body {
     background-image: url(images/bg-mobile.png);
     background-size: 150%; }

@@ -66,13 +66,17 @@ body {
             display: flex;
             align-items: center;
             gap: 1rem;
+           
 
             img {
-                padding: 15px;
+                
                 background: $VeryDarkBlue;
                 border-radius: 10px;
                 cursor: pointer;
                 transition: 0.5s;
+                padding: 10px;
+                width: 3rem;
+                height: 3rem;
 
                 &:hover {
                     background: #000;
@@ -199,7 +203,7 @@ body {
     }
 }
 
-@media (max-width: 375px) {
+@media (max-width: 400px) {
     body {
         background-image: url(images/bg-mobile.png);
         background-size: 150%;
